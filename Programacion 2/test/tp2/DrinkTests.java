@@ -33,7 +33,7 @@ public class DrinkTests {
 		cart.addToCart(coca);
 		cart.addToCart(spriteLight);
 		Invoice factura = cajero.factura(cart);
-		int result = factura.itemCost(spriteLight, catalog);
+		factura.itemCost(spriteLight, catalog);
 	}
 	@Test(expected = itemNoEstaEnElCatalogoException.class)
 	public void testCartItemsExceptionName() throws itemNoEstaEnElCatalogoException {
@@ -47,7 +47,7 @@ public class DrinkTests {
 		cart.addToCart(coca);
 		cart.addToCart(spriteLight);
 		Invoice factura = cajero.factura(cart);
-		String[] result = factura.itemNames(catalog);
+		factura.itemNames(catalog);
 	}
 	@Test
 	public void testCartItems() {

@@ -24,7 +24,7 @@ Cajera juli = new Cajera(aBase);
 Bondi sesenta = new Bondi(60.0, aBase);
 juli.addSube(aCard);
 juli.addMoney(aCard, 10.0);
-Double result = sesenta.viaje(aCard);
+sesenta.viaje(aCard);
 }
 @Test
 public void testSaldoCajera () {
@@ -44,7 +44,7 @@ BaseDeDatos aBase = new BaseDeDatos();
 Cajera juli = new Cajera(aBase);
 juli.addSube(aCard);
 juli.addMoney(aCard, 10.0);
-Double result = juli.checkMoney(anotherCard);
+juli.checkMoney(anotherCard);
 }
 @Test (expected = NoEstasRegistradoTodaviaException.class)
 public void addSaldoCajeraFail () {
